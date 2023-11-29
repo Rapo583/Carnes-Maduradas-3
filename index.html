@@ -1,172 +1,203 @@
 <!-- https://polaris.shopify.com/components -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carnes Maduradas</title>
-    <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Mogra/Mogra-Regular.ttf">
-    <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Bold.ttf">
-    <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Light.ttf">
-    <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Medium.ttf">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carnes Maduradas</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Mogra/Mogra-Regular.ttf">
+  <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Bold.ttf">
+  <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Light.ttf">
+  <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Medium.ttf">
 </head>
+
 <body>
-    <section class="main-container">
-        <header class="header">
-            <nav class="navbargrid">
-              <div class="navbar-left grid-item">
-                <a href="index.html">
-                  <figure>
-                    <img src="./Assets/logos/maduradasmrsf.png" alt="logo Maduradas" class="logo" title="Logo Maduradas">
-                  </figure>
-                </a>
-              </div>
-          
-              <div class="navbar-right grid-item">
-                <h1>Carnes Maduradas</h1>
-                <h2>La mejor Carne del Oriente Antioqueño</h2>
-                <ul>
-                  <li><a href="productos.html">Productos</a></li>
-                  <li><a href="/">Servicios</a></li>
-                  <li><a href="/">Ofertas</a></li>
-                  <li><a href="/">Otros</a></li>
-                  <li><a href="login.html" class="iniciosesion">Iniciar Sesión</a></li>
-                </ul>
-              </div>
-          
-              <div class="menu-toggle">
-                <img src="Assets/icons/icon_menu.svg" alt="menu" class="menu">
-              </div>
-            </nav>
-        </header>
-        <main>
-            <div class="catalogo-container">
-                <div class="catalogo">
-                    <h3>Catalogo de</h3>
-                    <h4>Carnes Frescas</h4>
-                    <figure>
-                        <img src="./Assets/img/backnav.jpg" alt="Catalogo" title="catalogo">
-                    </figure>
-                </div>
+  <div class="main-container">
+    <header class="header">
+      <div class="back">
+        <div class="menu container">
+          <a href="index.html" class="logo">
+            <h1>Carnes Maduradas</h1>
+            <h2>La mejor Carne del Oriente Antioqueño</h2>
+            <figure>
+              <img src="./Assets/logos/maduradasmrsf.png" class="headerlogo" alt="Logo Empresarial" title="Ir al inicio">
+            </figure>
+          </a>
+          <input type="checkbox" id="menu" />
+          <label for="menu">
+            <img src="./Assets/icons/bars-solid.svg" class="menu-icono" alt="">
+          </label>
+          <nav class="navbar">
+            <a href="index.html" class="logo1">
+              <h1>Carnes Maduradas</h1>
+              <h2>La mejor Carne del Oriente Antioqueño</h2>
+              <figure>
+                <img src="./Assets/logos/maduradasmrsf.png" class="logoresponsive" alt="Logo Empresarial" title="Ir al inicio">
+              </figure>
+            </a>
+            <ul class="opc">
+              <li><a class="active" href="./index.html">Inicio</a></li>
+              <li><a href="./productos.html">Productos</a></li>
+              <li><a href="/">Servicios</a></li>
+              <li><a href="/">Ofertas</a></li>
+              <li><a href="/">Otros</a></li>
+              <li><a href="login.html" class="iniciosesion">Iniciar Sesión</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="slider-box">
+        <ul>
+          <li>
+            <a href="#" title="Ir a catalogo"><img src="./Assets/img/backnav.jpg" alt="catalogo deproductos"></a>
+            <div class="catalogo">
+              <h3>Catalogo de</h3>
+              <h4>Carnes Frescas</h4>
             </div>
-            <div class="orden-container">
-                <div class="orden">
-                    <h3>Disfrute</h3>
-                    <h4>La mejor Carne y viva experiecias unicas</h4>
-                    <form action="#" class="sub-order">
-                        <input type="submit" value="Ordenar ahora" class="secondary-button">
-                    </form>
-                    <figure>
-                        <img src="./Assets/img/backorden.jpg" alt="Catalogo" title="catalogo">
-                    </figure>
-                </div>
+          </li>
+          <li class="container-order">
+            <img src="./Assets/img/backorden.jpg" alt="">
+            <div class="orden">
+              <h3>Disfrute</h3>
+              <h4>La mejor Carne y viva experiecias unicas</h4>
+              <form action="#" class="sub-order">
+                <input type="submit" value="Ordenar ahora" class="secondary-button">
+              </form>
             </div>
-            <div class="us-container">
-                <div class="us">
-                    <h3>Acerca</h3>
-                    <h4>de nosotros</h4>
-                    <h5>Somos <strong>Carnes Maduradas</strong>, una empresa dedicada al mundo de la carne.  
-                        Nos encontramos ubicados en El Carmen de Viboral, Antioquia, y nos 
-                        enorgullece ofrecer productos de alta calidad y sabor excepcional.
-                        Nuestro compromiso es brindar a nuestros clientes las mejores carnes, cuidadosamente seleccionadas y preparadas con 
-                         los más altos estándares de calidad. Trabajamos arduamente para garantizar 
-                         la satisfacción de nuestros clientes a través de un servicio excepcional y 
-                         productos que superan sus expectativas.</h5>
-                    <figure>
-                        <img src="./Assets/img/backus.jpg" alt="Catalogo" title="catalogo">
-                    </figure>
-                </div>
+          </li>
+          <li class="container-us">
+            <img src="./Assets/img/backus.jpg" alt="">
+            <div class="us">
+              <h3>Acerca</h3>
+              <h4>de nosotros</h4>
+              <p>Somos <strong>Carnes Maduradas</strong>, una empresa dedicada al mundo de la carne.
+                Nos encontramos ubicados en El Carmen de Viboral, Antioquia, y nos
+                enorgullece ofrecer productos de alta calidad y sabor excepcional.
+                Nuestro compromiso es brindar a nuestros clientes las mejores carnes, cuidadosamente seleccionadas y
+                preparadas con
+                los más altos estándares de calidad. Trabajamos arduamente para garantizar
+                la satisfacción de nuestros clientes a través de un servicio excepcional y
+                productos que superan sus expectativas.
+              </p>
             </div>
-            <div class="main_promo">
-                <div class="promo">
-                  <h3>Las mejores promociones las encuentras en nuestras tiendas</h3>
-                </div>
-            </div> 
-            <div class="cards-container">
-                <div class="product-card">
-                    <img src="Assets/img/backimg-Carnicos.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Res</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-cerdo.jpg" alt="" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Cerdo</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-pescado.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Pescado</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-pollo.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Pollo</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-res.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Nuestra Marca</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>   
+          </li>
+        </ul>
+      </div>
+      <h2 class="title-cards">Nuestros Productos</h2>
+      <div class="cards-container">
+        <div class="product-card">
+          <img src="Assets/img/backimg-Carnicos.jpg" alt="carnicos" class="product-img">
+          <div class="product-info">
+            <div>
+              <p>Res</p>
             </div>
-        </main>
-        <footer>
-            <div class="footer-container">
-                <div class="footer-content">
-                  <p>Somos una empresa que se dedica a [objetivo de la empresa]. Ofrecemos [productos o servicios] de alta calidad a nuestros clientes.</p>
-                </div>
-                <div class="footer-image">
-                  <img src="./Assets/img/maduradasmr.png" alt="Logo de la empresa" title="Home" class="logo">
-                </div>
+            <figure>
+              <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Assets/img/backimg-cerdo.jpg" alt="" class="product-img">
+          <div class="product-info">
+            <div>
+              <p>Cerdo</p>
             </div>
-            <div class="footer-content">
-                  <h2>Información de contacto</h2>
-                  <p>Teléfono: [número de teléfono]<br>
-                    Correo electrónico: [dirección de correo electrónico]<br>
-                    Dirección: [dirección de la empresa]</p>
+            <figure>
+              <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Assets/img/backtable4.jpg" alt="carnicos" class="product-img">
+          <div class="product-info">
+            <div>
+              <p>Pescado</p>
             </div>
-            <div class="footer-social">
-                  <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                  </ul>
+            <figure>
+              <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Assets/img/backimg-pollo.jpg" alt="carnicos" class="product-img">
+          <div class="product-info">
+            <div>
+              <p>Pollo</p>
             </div>
-            <div class="footer-content">
-                  <p>Copyright &copy; 2023</p>
+            <figure>
+              <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+            </figure>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="Assets/img/backimg-res.jpg" alt="carnicos" class="product-img">
+          <div class="product-info">
+            <div>
+              <p>Nuestra Marca</p>
             </div>
-        </footer>  
-    </section>
+            <figure>
+              <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+            </figure>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer-content">
+        <div>
+          <aside>
+            <img src="./Assets/logos/maduradasmrsf.png" class="footlogo" alt="Logo de la Empresa">
+          </aside>
+        </div>
+        <div>
+          <aside>
+            <br><br>
+            <h3>Contacto</h3>
+            <p>Dirección: Calle Principal 123, Ciudad</p>
+            <p>Email: <a href="mailto:info@tusitio.com">info@tusitio.com</a></p>
+            <p>Teléfono: +123 456 789</p>
+            <br><br>
+          </aside>
+        </div>
+        <div class="digital">
+          <aside class="rs">
+            <h3>Redes Sociales</h3>
+            <br>
+            <div class="links">
+              <a href="#" target="_blank" aria-label="Facebook"><img src="./Assets/icons/facebook-svgrepo-com.svg"
+                  alt="Facebook"></a>
+              <a href="#" target="_blank" aria-label="WhatsApp"><img
+                  src="./Assets/icons/whatsapp-whats-app-svgrepo-com.svg" alt="WhatsApp"></a>
+              <a href="#" target="_blank" aria-label="Instagram"><img src="./Assets/icons/instagram-1-svgrepo-com.svg"
+                  alt="Instagram"></a>
+            </div>
+          </aside>
+          <aside>
+            <br><br>
+            <div class="mp-container">
+              <aside class="mp">
+                <h3>Medios de Pago</h3>
+                <br>
+                <img src="./Assets/icons/bancolombia-svgrepo-com.svg" alt="Tarjeta Bancolombia">
+                <img src="./Assets/icons/master-card-svgrepo-com.svg" alt="MasterCard">
+              </aside>
+            </div>
+          </aside>
+        </div>
+      </div>
+      <div class="copyr">
+        <br>
+        <p>Todos los derechos reservados. | Diseñado por <a href="https://www.instagram.com/ser_dna/"
+            target="_blank">Camilo Andrés Marín</a></p>
+        <p>&copy; 2023</p>
+      </div>
+    </footer>
+
+  </div>
 </body>
+
 </html>

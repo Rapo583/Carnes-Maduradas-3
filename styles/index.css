@@ -1,4 +1,3 @@
-/* Para que el navegador reconozca la fuente */
 @font-face{
     font-family: 'Quicksand';
     src: url('fonts/Quicksand/static/Quicksand-Regular.ttf');
@@ -35,358 +34,686 @@
     --md:16px;
     --lg:18px;
 }
-html{
-    margin: 0;
-    box-sizing: border-box;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
 }
 body {
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     background-image: url("../Assets/img/background.jpg");
 }
-nav {
-    display: flex;
-    transition: height 0.9s ease-in-out;
-    justify-content: space-between;
-    background-color: var(--brown-dark);
-    background-image: url("../Assets/img/backimg-Carnicos.jpg");
-    background-size: cover;
-    background-position-y: center;
-    max-width: 100%;
-    height: 50vh;
-    margin-bottom: 50px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid var(--white);
-    border-radius: 0 0 20% 20%;
-    box-shadow: -5px 5px 9px 9px var(--black);
+.main-container{
+  width: 100%;
+  margin: 0 auto;
+
 }
-nav h1 {
-  width: 80%;
-  margin: 0 10% 0 10%;
-  padding: 10px;
-  font-size: 50px;
+/* ################################################################################################################################## */
+/* HEADER-NAV */
+.main-container .back{
+  width: 100%;
+  height: 25vh;
+  padding: 22px 0;
+  background-image: url("../Assets/img/backimg-Carnicos.jpg");
+  background-size: cover;
+  max-width: 100%;
+  justify-content: space-between;
+  background-position: center;
+  background-position-y: center;
+  text-align: center;
+  font-size: 25px;
+  border-bottom: 1px solid var(--white);
+  border-radius: 0 0 20% 20%;
+  box-shadow: -5px 5px 9px 9px var(--black);
+  position: fixed;
+  z-index: 100;
+}
+.menu{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 100;
+}
+.main-container .logo .headerlogo{
+  width: 250px;
+  background-color: transparent;
+  border-bottom: 1px solid white ;
+  box-shadow: -5px 5px 9px 9px var(--black);
+  border-radius: 95% 95% 10% 10%;
+
+}
+.main-container .logo1 .logoresponsive{
+  display: none;
+  width: 250px;
+  background-color: transparent;
+  border-bottom: 1px solid white ;
+  box-shadow: -5px 5px 9px 9px var(--black);
+  border-radius: 95% 95% 10% 10%;
+
+}
+.main-container .logo h1{
+  display: none;
+  margin-top: 1px;
+  font-size: 35px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   color: var(--white);
   background-color: var(--brown-dark);
   border: 1px solid var(--white);
   border-radius: 20px 20px 15px 15px;
   box-shadow: -5px 5px 5px 5px var(--black);
 }
-
-nav h2{
-    width:80%;
-    margin: 1.7% 10% 0 10%;
-    font-size: 16px;
+.main-container .logo h2{
+  display:none;
+  font-size: 16px;
+  color: var(--white);
+}
+.menu .navbar h1 {
+  margin-top: 20px;
+  font-size: 50px;
+  color: var(--white);
+  text-shadow: -3px 4px 1px var(--black);
+  background-color: var(--brown-dark);
+  border: 1px solid var(--white);
+  border-radius: 20px 20px 15px 15px;
+  box-shadow: -5px 5px 5px 5px var(--black);
+}
+.menu .navbar h2{;
+    font-size:19px;
     color: var(--white);
+    text-shadow: -0.8px 0.8px var(--brown-dark);
 }
-.menu {
-    display: none;
+.menu .navbar ul li{
+  position: relative;
+  float: left;
+  
 }
-.logo {
-    width: 400px;
-    height: 170px;
-    object-fit: cover;
-    background-color: var(--brown-dark);
-    border: 1px solid white ;
-    box-shadow: -5px 5px 9px 9px var(--black);
-    border-radius: 95% 95% 10% 10%;
-    padding-bottom: 2.5px;
-    animation-name: primera; /* Le doy un nombre */
-    animation-duration: 0.25s;
-    animation-delay: 0.5s;
+.menu .navbar ul li a{
+  display: block;
+  transition: 1.01s;
+  font-size: 18px;
+  padding: 5px;
+  color: var(--white);
+  margin:15px ;
 }
-@keyframes primera{ /* Creamos instantes llamados fotogramas */
-    0%{
-        width: 0px;
-        height: 0px;
-    }
-    25%{
-        width:75px;
-        height: 35px;
-    }
-    50%{
-        width: 150px;
-        height: 70px;
-    }
-    75%{
-        width: 225px;
-        height: 105px;
-    }
-    100%{
-        width: 300px;
-        height: 135px;
-    }
+.menu ul li a:hover {
+  
+  font-size: 18px;
+  border: 0.5px solid var(--brown-dark);
+  background-color: var(--white);
+  color: var(--brown-dark);
+  box-shadow: -5px 5px 9px 9px var(--black);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: bold;
 }
-
-.navbar-right ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    height: 120px;
-    gap: 5px;
+#menu{display: none;}
+.menu-icono{width: 25px;}
+.menu label{
+  cursor: pointer;
+  display: none;
 }
-.navbar-right ul li {
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    margin: 30px;
-}
-.navbar-right ul li a {
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    color: var(--white);
-}
-.navbar-right ul li a:hover {
-    border: 0.5px solid var(--brown-dark);
-    background-color: var(--white);
-    color: var(--brown-dark);
-    box-shadow: -5px 5px 9px 9px var(--black);
-    border-radius: 5px;
-    padding: 5px;
-    font-weight: bold;
-    
-}
-@media (max-width: 640px) {
-  .menu {
+@media (max-width: 1050px){
+  .menu{
+    padding: 30px;
+  }
+  .menu label{
+    display: initial;
+  }
+ .main-container .back{
+    padding: 40px 0;
+    height: 25vh;
+  }
+  .menu .logo h1{
     display: block;
+    text-shadow: -3px 3px var(--black);
   }
-  .navbar-left ul {
+  .menu .logo h2{
+    display: block;
+    text-shadow: -2px 1px var(--brown-dark);
+  }
+  .logo1 h1,h2{
     display: none;
   }
-  .navbar-email {
+  .menu .logo1 .logoresponsive{
+    display:inline-block;
+    margin-top: 25px;
+  }
+  .menu .logo .headerlogo{
     display: none;
   }
-}
-main{
-    margin: 0;
-    padding: 0;
-}
-.catalogo-container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1300px;
-  height: 400px;
-  margin: 0 auto;
-  object-fit: cover;
-  position: relative;
+  .menu .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    background-image: none;
+    background:linear-gradient(
+      90deg,
+      rgba(94,67,11,10)25%,
+      rgba(207,103,95,74)73%
+    );
+  }
+    .menu .navbar ul li{
+      width: 100%;
+    }
+    #menu:checked ~ .navbar{
+      display: initial;
+      border: 1px solid var(--white);
+      box-shadow: -5px 5px 9px 9px var(--black);
+      border-radius: 5%;
+    }
+
+  }
+/* ################################################################################### */
+/* SLIDER */
+/* Estilos por defecto para tamaños de pantalla grandes */
+.slider-box {
+  width: 95%;
+  height: 55vh;
+  margin:auto;
+  margin-bottom: 100px;
   overflow: hidden;
-  cursor: pointer;
-
-}
-.catalogo h3{
-    font-size: 100px;
-    font-family: 'Fruktur';
-    position: absolute;
-    top: -25%;
-    left: 45%;
-    z-index: 11;
-    color: var(--brown-dark);
-    margin-left: 100px;
-
-}
-.catalogo h4{
-    font-size: 50px;
-    font-weight: bold;
-    font-family: 'Caligrafiti';
-    position: absolute;
-    top: 2%;
-    left: 50%;
-    margin-left: 20%;
-    z-index: 11;
-    color: var(--white);  
-}
-.catalogo  figure img{
-    position: relative;
-    top: -200px;
-    width: 100%;
-    border: 2px solid var(--white);
-    box-shadow: -5px 5px 9px 9px var(--black);
-    object-fit: contain;
-}
-
-@media (max-width: 768px) {
-  .catalogo-container {
-    flex-direction: column;
-  }
-}
-.catalogo:hover {
-  opacity: 0.8;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.5s ease-in-out;
+  border-radius: 2%;
   border: 1px solid var(--white);
   box-shadow: -5px 5px 9px 9px var(--black);
+  position: relative; /* Agregamos posicionamiento relativo al contenedor principal */
+  top: 300px;
+  margin-bottom: 450px;
 }
 
-.catalogo:hover figure {
-  transform: scale(1.2);
-  transition: transform 0.5s ease-in-out;
+.slider-box ul {
+  display: flex;
+  padding: 0;
+  width: 300%;
+  height: 70vh;
+  animation: slide 5s infinite alternate ease-in-out;
 }
-.orden-container {
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1300px;
-  height: 400px;
-  margin: 0 auto;
+
+.slider-box li {
   object-fit: cover;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  
+  list-style: none;
+  position: absolute;
+  margin-top:5px;
 }
-.orden .sub-order{
-    display: flex;
-    width: 10%;
-    margin-top: 11%;
-    margin-left: 4.5%;
-  
+.catalogo {
+  width: 100%;
+  position: absolute;
+  top: 50%; 
 }
-.orden h3{
-    font-size: 120px;
-    font-family: 'Amatic';
-    position: absolute;
-    top: -35%;
-    right: 75%;
-    left: -4%;
-    z-index: 11;
-    color: var(--brown-dark);
-    margin-left: 100px;
+.catalogo h3 {
+  font-display: fixed;
+  font-family: 'Fruktur';
+  color: var(--brown-dark);
+  margin-bottom: 5px;
+  font-size: 7vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  text-shadow: -4px 0px 1px var(--black);
+  position: absolute;
+  top: -150px;
+  left: 550px;
+}
 
+.catalogo h4 {
+  font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  font-weight: bold;
+  font-family: 'Caligrafiti';
+  text-shadow: -4px 0px 1px var(--white);
+  color: var(--black);
+  position: absolute;
+  top: -98px;
+  left: 650px;
 }
-.orden h4{
-    font-size: 25px;
-    font-weight: bold;
-    font-family: 'Amatic';
-    position: absolute;
-    font-weight: bold;
-    top: 17%;
-    right: 65%;
-    left: 4%;
-    z-index: 11;
-    color: var(--black);  
-}
-.orden  figure img{
-    position: relative;
-    top: -540px;
-    width: 100%;
-    border: 2px solid var(--brown-dark);
-    box-shadow: -5px 5px 9px 9px var(--black);
+@media only screen and (max-width: 1024px) {
+  .slider-box {
+    width: 90%;
+    height: 49vh;
+  }
+  .slider-box li {
     object-fit: cover;
-}
+    list-style: none;
+    position: absolute;
+    margin-top: 40px;
+  }
 
-@media (max-width: 768px) {
-  .orden-container {
-    flex-direction: column;
+  .catalogo h3{
+    font-size: 7vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--black);
+    position: absolute;
+    top: -130px;
+    left: 355px;
+  }
+  .catalogo h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--white);
+    position: absolute;
+    top: -85px;
+    left: 440px;
   }
 }
-.orden:hover {
-  opacity: 0.8;
-  background-color: rgba(0, 0, 0, 0.5);
-  transition: opacity 0.5s ease-in-out;
-  border: 1px solid var(--white);
-  box-shadow: -5px 5px 9px 9px var(--black);
+
+/* Estilos para tamaños de pantalla medianos */
+@media only screen and (max-width: 810px) {
+  .slider-box {
+    width: 90%;
+    height: 50vh;
+  }
+  .slider-box li {
+    object-fit: cover;
+    list-style: none;
+    position: absolute;
+    margin-top: 80px;
+  }
+
+  .catalogo h3{
+    font-size: 9vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--black);
+    position: absolute;
+    top: -122px;
+    left: 155px;
+  }
+  .catalogo h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--white);
+    position: absolute;
+    top: -80px;
+    left: 285px;
+  }
 }
 
-.orden:hover figure {
-  transform: scale(1.2);
-  transition: transform 0.5s ease-in-out;
+/* Estilos para tamaños de pantalla pequeños (como dispositivos móviles) */
+@media only screen and (max-width: 550px) {
+  .slider-box {
+    width: 95%;
+    height: 43vh;
+  }
+  .slider-box li {
+    object-fit: cover;
+    list-style: none;
+    position: absolute;
+    margin-top: 80px;
+  }
+  .catalogo h3{
+    font-size: 10vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--black);
+    position: absolute;
+    top: -105px;
+    left: 155px;
+  }
+  .catalogo h4{
+    font-size: 7vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -2px 0px 1px var(--white);
+    position: absolute;
+    top: -75px;
+    left: 225px;
+  }
+}
+.orden {
+  width: 100%;
+  position: absolute;
+  top: 50%; 
+}
+.orden h3 {
+  font-display: fixed;
+  font-family: 'Amatic';
+  color: var(--brown-dark);
+  margin-bottom: 5px;
+  font-size: 9vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  text-shadow: -4px 0px 1px var(--black);
+  position: absolute;
+  top: -140px;
+  left: 90px;
+}
+
+.orden h4 {
+  font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  font-weight: bold;
+  font-family: 'Amatic';
+  text-shadow: -1px 2px 1px var(--white);
+  color: var(--black);
+  position: absolute;
+  top: -20px;
+  left: 100px;
 }
 .secondary-button{
-    display: grid;
-    color: brown;
-    background-color: transparent;
-    border-radius: 8px;
-    border:0.5px solid var(--white);
-    box-shadow: -5px 5px 9px 9px var(--black);
-    width: 100%;
-    height: 50px;
-    cursor: pointer;
-    font-size: var(--md);
-    font-weight: bold;
-    z-index: 15;
+  display: grid;
+  color: brown;
+  background: transparent;
+  backdrop-filter: blur(25px);
+  border-radius: 8px;
+  border:0.5px solid var(--white);
+  box-shadow: -1px 1px 5px 5px var(--black);
+  width: 15%;
+  height: 50px;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  z-index: 15;
+  margin-left: 90px;
+  margin-top: 50px;
 }
 .secondary-button:hover{
-    background-color: rgb(243, 204, 29);
-    color: var(--white);
-    border: none;
+  background-color: rgb(223, 206, 131);
+  color: var(--brown-dark);
+  text-shadow: -1px 1px 2px var(--black);
+  border: none;
+  box-shadow: none;
 }
-.us-container {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1300px;
-    height: 400px;
-    margin: 0 auto;
+@media only screen and (max-width: 1024px) {
+  .slider-box {
+    width: 90%;
+    height: 49vh;
+  }
+  .slider-box li {
     object-fit: cover;
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-  
-}
-.us h3{
-      font-size: 100px;
-      font-family: 'Fruktur';
-      position: absolute;
-      top: -25%;
-      right: 70%;
-      z-index: 11;
-      color: var(--brown-dark);
-      margin-left: 100px;
-}
-.us h4{
-      font-size: 50px;
-      font-weight: bold;
-      font-family: 'Caligrafiti';
-      position: absolute;
-      top: 0%;
-      right: 65%;
-      z-index: 11;
-      color: var(--white);  
-}
-.us h5{
-    font-size: 18px;
-    font-weight: bold;
-    font-family: 'Quicksand';
+    list-style: none;
     position: absolute;
-    text-align: justify;
-    top: 30%;
-    left: 6%;
-    right: 50%;
-    z-index: 11;
-    color: var(--white);  
-    box-shadow: -5px 5px 9px 9px var(--black);
-    background-color: transparent;
-    padding: 1%;
-}
-.us  figure img{
-      position: relative;
-      top: -150px;
-      width: 100%;
-      border: 2px solid var(--white);
-      border-right: 2px solid var(--white);
-      box-shadow: -5px 5px 9px 9px var(--black);
-      object-fit: contain;
+    margin-top: 40px;
   }
-  
-  @media (max-width: 768px) {
-    .us-container {
-      flex-direction: column;
-    }
+
+  .orden h3{
+    font-size:11vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--black);
+    position: absolute;
+    top: -100px;
+    left: 26px;
   }
-.promo{
-    align-items: center;
-    text-align: center;
-    margin-bottom: 20px;
+  .orden h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--white);
+    position: absolute;
+    top: -5px;
+    left: 40px;
+  }
+  .secondary-button{
+    width: 20%;
+    position: absolute;
+    left: -55px;
+  }
 }
 
+/* Estilos para tamaños de pantalla medianos */
+@media only screen and (max-width: 810px) {
+  .slider-box {
+    width: 90%;
+    height: 50vh;
+  }
+  .slider-box li {
+    object-fit: cover;
+    list-style: none;
+    position: absolute;
+    margin-top: 80px;
+  }
+
+  .orden h3{
+    font-size: 13vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--black);
+    position: absolute;
+    top: -80px;
+    left: 26px;
+  }
+  .orden h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -1px 3px 1px var(--white);
+    position: absolute;
+    top: 2px;
+    left: 40px;
+  }
+  .secondary-button{
+    width: 25%;
+    position: absolute;
+    left: -60px;
+  }
+}
+
+/* Estilos para tamaños de pantalla pequeños (como dispositivos móviles) */
+@media only screen and (max-width: 550px) {
+  .slider-box {
+    width: 95%;
+    height: 43vh;
+  }
+  .slider-box .container-order {
+    list-style: none;
+  }
+  .order h3{
+    font-size: 15vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--black);
+    position: absolute;
+    top: -80px;
+    left: 15px;
+  }
+  .order h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -1px 0px 1px var(--white);
+    position: absolute;
+    top: 6px;
+    left: 26px;
+  }
+  .secondary-button{
+    width: 35%;
+    position: absolute;
+    left: -75px;
+  }
+}
+.us {
+  width: 100%;
+  position: absolute;
+  top: 50%; 
+}
+.us h3 {
+  font-display: fixed;
+  font-family: 'Amatic';
+  color: var(--brown-dark);
+  margin-bottom: 5px;
+  font-size: 10vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  text-shadow: -4px 0px 1px var(--black);
+  position: absolute;
+  top: -155px;
+  left: 80px;
+}
+
+.us h4 {
+  font-size: 4vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  font-weight: bold;
+  font-family: 'Amatic';
+  text-shadow: -1px 2px 1px var(--brown-dark);
+  color: var(--white);
+  position: absolute;
+  top: -30px;
+  left: 140px;
+}
+.us p{
+  font-size: 1.5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  padding: 5px;
+  margin: 80px 50px 0;
+  position: absolute;
+  text-align: justify;
+  color: var(--white);
+  text-shadow: -1px 1px var(--black);
+  background: transparent;
+  backdrop-filter: blur(25px);
+  border-radius: 8px;
+  border:0.5px solid var(--white);
+  box-shadow: -1px 1px 5px 5px var(--black);
+  top: -30px;
+}
+@media only screen and (max-width: 1024px) {
+  .slider-box {
+    width: 90%;
+    height: 49vh;
+  }
+  .slider-box li {
+    object-fit: cover;
+    list-style: none;
+    position: absolute;
+    margin-top: 40px;
+  }
+
+  .us h3{
+    font-size:7vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--white);
+    position: absolute;
+    top: -160px;
+    left: 15px;
+  }
+  .us h4{
+    font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--brown-dark);
+    position: absolute;
+    top: -70px;
+    left: 56px;
+  }
+  .us p{
+    font-size: 2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    padding: 5px;
+    margin: 20px 50px 0;
+    position: absolute;
+    text-align: justify;
+    color: var(--white);
+    text-shadow: -1px 1px var(--black);
+    background: transparent;
+    backdrop-filter: blur(25px);
+    border-radius: 8px;
+    border:0.5px solid var(--white);
+    box-shadow: -1px 1px 5px 5px var(--black);
+    top: -50px;
+  }
+}
+
+/* Estilos para tamaños de pantalla medianos */
+@media only screen and (max-width: 810px) {
+  .slider-box {
+    width: 90%;
+    height: 50vh;
+  }
+  .slider-box li {
+    object-fit: cover;
+    list-style: none;
+    position: absolute;
+    margin-top: 80px;
+  }
+
+  .us h3{
+    font-size: 12vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -4px 0px 1px var(--white);
+    position: absolute;
+    top: -180px;
+    left: 15px;
+  }
+  .us h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -1px 3px 1px var(--brown-dark);
+    position: absolute;
+    top: -106px;
+    left: 56px;
+  }
+  .us p{
+    font-size: 2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    padding: 5px;
+    margin: 20px 50px 0;
+    position: absolute;
+    text-align: justify;
+    color: var(--white);
+    text-shadow: -1px 1px var(--black);
+    background: transparent;
+    backdrop-filter: blur(25px);
+    border-radius: 8px;
+    border:0.5px solid var(--white);
+    box-shadow: -1px 1px 5px 5px var(--black);
+    top: -50px;
+  }
+}
+
+/* Estilos para tamaños de pantalla pequeños (como dispositivos móviles) */
+@media only screen and (max-width: 550px) {
+  .slider-box {
+    width: 95%;
+    height: 43vh;
+  }
+  .slider-box .container-order {
+    list-style: none;
+    margin-bottom: 80px;
+  }
+  .us h3{
+    font-size: 15vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -1px 2px 1px var(--white);
+    position: absolute;
+    top: -180px;
+    left: 15px;
+  }
+  .us h4{
+    font-size: 5vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    text-shadow: -1px 0px 1px var(--brown-dark);
+    position: absolute;
+    top: -106px;
+    left: 56px;
+  }
+  .us p{
+    font-size: 2vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+    padding: 5px;
+    margin: 20px 50px 0;
+    position: absolute;
+    text-align: justify;
+    color: var(--white);
+    text-shadow: -1px 1px var(--black);
+    background: transparent;
+    backdrop-filter: blur(25px);
+    border-radius: 8px;
+    border:0.5px solid var(--white);
+    box-shadow: -1px 1px 5px 5px var(--black);
+    top: -50px;
+  }
+}
+
+.slider-box img{
+  width: 100%;
+  height: 100%;
+}
+.slider-box li{
+  width:100%;
+  object-fit: cover;
+  list-style: none;
+  position: relative;
+  top: -90px;
+  left: 5%1;
+}
+@keyframes slide{
+  0%{margin-left: 0;}
+  20%{margin-left: 0;}
+
+  25%{margin-left: -100%;}
+  45%{margin-left: -100%;}
+  
+  50%{margin-left: -200%;}
+  70%{margin-left: -200%;}
+
+  75%{margin-left: -200%;}
+  100%{margin-left: -200%;}
+}
+/*###########################################################################################*/
+/*Titulo Cards*/
+h2 .title-cards{
+  font-size: 3vw; /* Tamaño de fuente relativo al ancho de la pantalla */
+  text-align: center;
+  color: var(--white);
+  text-shadow: -1px 1px var(--black);
+  background: transparent;
+  backdrop-filter: blur(25px);
+  border-radius: 8px;
+  border:0.5px solid var(--white);
+  box-shadow: -1px 1px 5px 5px var(--black);
+}
+
+/* ######################################################################################### */
 .cards-container{
     display: grid;
     grid-template-columns: repeat(auto-fill, 240px); /* repeat(#column requeridas, tamaño cada column) */
@@ -401,12 +728,15 @@ main{
     height: 240px;
     border-radius: 20px;
     object-fit: cover; /* Imagen obtiene tamaño realindepenientemente del width y height */
+    border: 1px solid var(--white);
+    box-shadow: -5px 5px 9px 9px var(--black);
 }
 .product-info{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 12px;
+    color: var(--white);
 }
 .product-info figure{
     margin: 0;
@@ -428,151 +758,71 @@ main{
     color: var(--very-light-pink);
 }
 
-@media (max-width: 768px) {
-    .header .navbar {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .header .navbar-left {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-    }
-  
-    .header .navbar-right {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-  
-    .header .navbar-right ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-  
-    .header .navbar-right ul li {
-      margin: 10px;
-    }
-  
-    .menu-toggle {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 20px;
-      cursor: pointer;
-    }
-  }
+
 /* Configuración del pie de página */
-footer {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--brown-dark);
-  background-image: url("../Assets/img/backfoot.jpg");
-  background-size: cover;
-  background-position-y: 550px;
-  max-width: 100%;
-  height: 50vh;
-  margin-top: 50px;
+.footer {
+  background-image: url(../Assets/img/backfoot.jpg);
+  background-position: center;
+  background-position-y: 1250px;
+  background-position-x: center;
+  color: var(--white);
+  margin-top: 30px;
+  padding: 20px;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid var(--white);
-  border-radius: 20% 20% 0 0;
-  box-shadow: -5px 5px 9px 9px var(--black);
-}
-.footer-container {
-  display: flex;
-  flex-direction: column;
   width: 100%;
 }
-/* Contenido del pie de página */
-/* Footer content */
-.footer-content {
-  flex: 1;
-  padding: 20px;
-}
 
-/* Imagen del pie de página */
-
-
-@keyframes primera{ /* Creamos instantes llamados fotogramas */
-  0%{
-    width: 0px;
-    height: 0px;
-  }
-  25%{
-    width:75px;
-    height: 35px;
-  }
-  50%{
-    width: 150px;
-    height: 70px;
-  }
-  75%{
-    width: 225px;
-    height: 105px;
-  }
-  100%{
-    width: 300px;
-    height: 135px;
-  }
-}
-
-/* Información de contacto del pie de página */
-.footer-contact {
-  flex: 1;
-}
-
-/* Redes sociales del pie de página */
-.footer-social {
-  flex: 1;
-}
-
-/* Lista de redes sociales del pie de página */
-.footer-social ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  height: 120px;
-  gap: 5px;
-}
-
-.footer-social ul li {
-  text-align: center;
-  align-items: center;
-  justify-content: space-around;
-  margin: 30px;
-}
-
-.footer-social ul li a {
+.footer a {
+  color: var(--white);
   text-decoration: none;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--white);
 }
 
-.footer-social ul li a:hover {
-  border: 0.5px solid var(--brown-dark);
-  background-color: var(--white);
-  color: var(--brown-dark);
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer .footlogo {
+  width: 250px;
+  background-color: transparent;
+  border-bottom: 1px solid white;
   box-shadow: -5px 5px 9px 9px var(--black);
-  border-radius: 5px;
-  padding: 5px;
-  font-weight: bold;
+  border-radius: 95% 95% 10% 10%;
 }
 
-/* Copyright del pie de página */
-.footer-copyright {
-  text-align: center;
-  font-size: 12px;
-  color: var(--white);
+.footer img {
+  width: 50px;
+  height: auto;
 }
+
+.footer aside {
+  flex: 1;
+  padding: 0 10px;
+  max-width: 300px; /* Ajusta según sea necesario */
+}
+.digital{
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer{
+    background-position: center;
+    background-position-y: 750px;
+  }
+  .footer-content {
+      flex-direction: column;
+  }
+  .footer aside {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+  
+  .copyr{
+    width: 100%;
+
+  }
+  
+}
+

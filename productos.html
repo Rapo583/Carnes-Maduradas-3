@@ -12,161 +12,931 @@
     <link rel="stylesheet" href="../Curso Practico FrontenDeveloper/fonts/Quicksand/static/Quicksand-Medium.ttf">
 </head>
 <body>
-    <section class="main-container">
-        <header class="header">
-            <nav class="navbargrid">
-              <div class="navbar-left grid-item">
-                <a href="index.html">
-                  <figure>
-                    <img src="./Assets/logos/maduradasmrsf.png" alt="logo Maduradas" class="logo" title="Logo Maduradas">
-                  </figure>
-                </a>
-              </div>
-          
-              <div class="navbar-right grid-item">
+    <div class="main-container">
+      <header class="header">
+        <div class="back">
+          <div class="menu container">
+              <a href="index.html" class="logo">
                 <h1>Carnes Maduradas</h1>
                 <h2>La mejor Carne del Oriente Antioqueño</h2>
-                <ul>
-                  <li><a href="#">Productos</a></li>
-                  <li><a href="/">Servicios</a></li>
-                  <li><a href="/">Ofertas</a></li>
-                  <li><a href="/">Otros</a></li>
-                  <li><a href="login.html" class="iniciosesion">Iniciar Sesión</a></li>
-                </ul>
-              </div>
-          
-              <div class="menu-toggle">
-                <img src="Assets/icons/icon_menu.svg" alt="menu" class="menu">
-              </div>
+                <figure>
+                  <img src="./Assets/logos/maduradasmrsf.png" class="headerlogo" alt="">
+                </figure>
+              </a>
+              <input type="checkbox" id="menu" />
+              <label for="menu">
+                <img src="./Assets/icons/bars-solid.svg" class="menu-icono" alt="">
+              </label>
+            <nav class="navbar">
+              <a href="index.html" class="logo1">
+                <h1>Carnes Maduradas</h1>
+                <h2>La mejor Carne del Oriente Antioqueño</h2>
+                <figure>
+                  <img src="./Assets/logos/maduradasmrsf.png" class="logoresponsive" alt="">
+                </figure>
+              </a>
+              <ul class="opc">
+                <li><a class="active" href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="/">Servicios</a></li>
+                <li><a href="/">Ofertas</a></li>
+                <li><a href="/">Otros</a></li>
+                <li><a href="login.html" class="iniciosesion">Iniciar Sesión</a></li>
+              </ul>
             </nav>
-        </header>
-        <main>
-            <section>
-                <div class="container-category">
-                    <div class="category">
-                      <table>
-                        <thead>
+          </div>
+        </div>
+      </header>  
+      <main>
+          <section>
+              <div class="container-category">
+                  <div class="category">
+                    <table class="table">
+                      <caption class="restable">Res</caption>
+                      <thead class="res">
                           <tr>
-                            <th>Producto</th>
-                            <th>Precio</th>
-                            <th>Disponibilidad</th>
+                              <th>Categoria</th>
+                              <th>Tipo</th>
+                              <th class="precio">Precio(kg)</th>
+                              <th>Disponibilidad</th>
                           </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>Res</td>
-                            <td>$100</td>
-                            <td>En stock</td>
+                      </thead>
+                      <tbody class="tablebody">
+                          <tr class="tbody">
+                              <td colspan="1" rowspan="10" class="tbody-cat" data-label="Categoria">Asar</td>
                           </tr>
-                          <tr>
-                            <td>Cerdo</td>
-                            <td>$50</td>
-                            <td>Agotado</td>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Solomito</td>
+                              <td class="Precio" data-label="Precio">$ 50000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
                           </tr>
-                          <tr>
-                            <td>Pollo</td>
-                            <td>$30</td>
-                            <td>En stock</td>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Punta de Anca </td>
+                            <td class="Precio" data-label="Precio">$ 44000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
                           </tr>
-                          <tr>
-                            <td>Pescado</td>
-                            <td>$20</td>
-                            <td>En stock</td>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Chata / Churrasco</td>
+                              <td class="Precio" data-label="Precio">$ 44000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
                           </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Solomo Redondo</td>
+                              <td class="Precio" data-label="Precio">$ 44000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Tabla</td>
+                              <td class="Precio" data-label="Precio">$ 32000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Huevo de Aldana</td>
+                              <td class="Precio" data-label="Precio">$ 32000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Solomo Extranjero</td>
+                              <td class="Precio" data-label="Precio">$ 32000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Cascara</td>
+                              <td class="Precio" data-label="Precio">$ 28000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Sabaleta</td>
+                              <td class="Precio" data-label="Precio">$ 29000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td colspan="1" rowspan="12" class="tbody-cat" data-label="Categoria">Sanchocho</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Posta</td>
+                              <td class="Precio" data-label="Precio">$ 30000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Muchacho</td>
+                              <td class="Precio" data-label="Precio">$ 30000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Paletero</td>
+                              <td class="Precio" data-label="Precio">$ 29000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Cecino</td>
+                            <td class="Precio" data-label="Precio">$ 29000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Sobrebarriga</td>
+                              <td class="Precio" data-label="Precio">$ 26000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Pecho</td>
+                              <td class="Precio" data-label="Precio">$ 26000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Trestelas</td>
+                              <td class="Precio" data-label="Precio">$ 22000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Copete</td>
+                              <td class="Precio" data-label="Precio">$ 27000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Morrillo</td>
+                              <td class="Precio" data-label="Precio">$ 30000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Lagarto</td>
+                              <td class="Precio" data-label="Precio">$ 26000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Tapa de costilla</td>
+                              <td class="Precio" data-label="Precio">$ 26000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td colspan="1" rowspan="7" class="tbody-cat" data-label="Categoria">Viceras</td>
+                            </tr>
+                            <tr class="tbody">    
+                                <td class="Tipo" data-label="Tipo">Mondongo</td>
+                                <td class="Precio" data-label="Precio">$ 21000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Hígado</td>
+                                <td class="Precio" data-label="Precio">$ 22000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Pajarilla</td>
+                                <td class="Precio" data-label="Precio">$ 16000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Bofe</td>
+                                <td class="Precio" data-label="Precio">$ 12000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Corazón</td>
+                                <td class="Precio" data-label="Precio">$ 16000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Lengua</td>
+                                <td class="Precio" data-label="Precio">$ 25000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td colspan="1" rowspan="7" class="tbody-cat" data-label="Categoria">Otros Productos</td>
+                            </tr>
+                            <tr class="tbody">    
+                                <td class="Tipo" data-label="Tipo">Cola de Res</td>
+                                <td class="Precio" data-label="Precio">$ 25000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Costilla de Res</td>
+                                <td class="Precio" data-label="Precio">$ 22000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Pata de Res</td>
+                                <td class="Precio" data-label="Precio">$ 15000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Par Ojos de Res</td>
+                                <td class="Precio" data-label="Precio">$ 5000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Par Ojos de Res con Hueso</td>
+                                <td class="Precio" data-label="Precio">$ 6000</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                            <tr class="tbody">
+                              <td class="Tipo" data-label="Tipo">Unidad Riñon de Res</td>
+                                <td class="Precio" data-label="Precio">$ 2500</td>
+                                <td class="Disponibilidad" data-label="Disponibilidad">
+                                  <input type="checkbox" id="Disponibilidad" />
+                                  <label for="Disponibilidad">
+                                  </label>
+                                </td>
+                            </tr>
+                      </tbody>
+                    </table>
+                    <table class="table">
+                      <caption class="cerdotable">Cerdo</caption>
+                      <thead class="res">
                           <tr>
-                            <td>Nuestra Marca</td>
-                            <td>$15</td>
-                            <td>Agotado</td>
+                              <th>Categoria</th>
+                              <th>Tipo</th>
+                              <th class="precio">Precio(kg)</th>
+                              <th>Disponibilidad</th>
+                          </tr>
+                      </thead>
+                      <tbody class="tablebody">
+                          <tr class="tbody">
+                              <td colspan="1" rowspan="6" class="tbody-cat" data-label="Categoria">Asar</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Solomito</td>
+                              <td class="Precio" data-label="Precio">$ 25000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Cañon </td>
+                            <td class="Precio" data-label="Precio">$ 25000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Pierna</td>
+                              <td class="Precio" data-label="Precio">$ 22000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Cabeza de cañon</td>
+                              <td class="Precio" data-label="Precio">$ 20000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Costilla de Cerdo</td>
+                              <td class="Precio" data-label="Precio">$ 24000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td colspan="1" rowspan="4" class="tbody-cat" data-label="Categoria">Tocino</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Barriguero</td>
+                              <td class="Precio" data-label="Precio">$ 24000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Brazuelo</td>
+                              <td class="Precio" data-label="Precio">$ 22000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Papada</td>
+                              <td class="Precio" data-label="Precio">$ 21000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td colspan="1" rowspan="6" class="tbody-cat" data-label="Categoria">Sancocho</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Espinazo</td>
+                              <td class="Precio" data-label="Precio">$ 12000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Osobuco</td>
+                              <td class="Precio" data-label="Precio">$ 12000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Pezuña por unidad</td>
+                              <td class="Precio" data-label="Precio">$ 4000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Garra sin pelar</td>
+                              <td class="Precio" data-label="Precio">$ 8000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Grasa pelada</td>
+                              <td class="Precio" data-label="Precio">$ 6000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td colspan="1" rowspan="9" class="tbody-cat" data-label="Categoria">Otros Productos</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Jamon Natural</td>
+                              <td class="Precio" data-label="Precio">$ 12000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Jamón Verduras</td>
+                              <td class="Precio" data-label="Precio">$ 12000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Asadura</td>
+                              <td class="Precio" data-label="Precio">$ 9000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Empeella</td>
+                              <td class="Precio" data-label="Precio">$ 4000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Chorizo de cerdo x5</td>
+                              <td class="Precio" data-label="Precio">$ 7000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">chorizo de Cerdo Unidad</td>
+                              <td class="Precio" data-label="Precio">$ 2000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Careta</td>
+                              <td class="Precio" data-label="Precio">$ 5000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Unidad Riñon de Cerdo</td>
+                              <td class="Precio" data-label="Precio">$ 500</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
                           </tr>
                         </tbody>
-                      </table>
-                    </div>
-                </div>
-            </section> 
-            <div class="cards-container">
-                <div class="product-card">
-                    <img src="Assets/img/backimg-Carnicos.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Res</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-cerdo.jpg" alt="" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Cerdo</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-pescado.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Pescado</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-pollo.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Pollo</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>
-                <div class="product-card">
-                    <img src="Assets/img/backimg-res.jpg" alt="carnicos" class="product-img">
-                    <div class="product-info">
-                        <div>
-                            <p>Nuestra Marca</p>
-                        </div>
-                        <figure>
-                            <img src="Assets/icons/bt_add_to_cart.svg" alt="">
-                        </figure>
-                    </div> 
-                </div>   
-            </div>
-        </main>
-        <footer>
-            <div class="footer-container">
-                <div class="footer-content">
-                  <p>Somos una empresa que se dedica a [objetivo de la empresa]. Ofrecemos [productos o servicios] de alta calidad a nuestros clientes.</p>
-                </div>
-                <div class="footer-image">
-                  <img src="./Assets/img/maduradasmr.png" alt="Logo de la empresa" title="Home" class="logo">
-                </div>
-            </div>
-            <div class="footer-content">
-                  <h2>Información de contacto</h2>
-                  <p>Teléfono: [número de teléfono]<br>
-                    Correo electrónico: [dirección de correo electrónico]<br>
-                    Dirección: [dirección de la empresa]</p>
-            </div>
-            <div class="footer-social">
-                  <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                  </ul>
-            </div>
-            <div class="footer-content">
-                  <p>Copyright &copy; 2023</p>
-            </div>
-        </footer>  
-    </section>
+                    </table>
+                    <table class="table">
+                      <caption class="pollootable">Pollo</caption>
+                      <thead class="res">
+                          <tr>
+                              <th>Categoria</th>
+                              <th>Tipo</th>
+                              <th class="precio">Precio(kg)</th>
+                              <th>Disponibilidad</th>
+                          </tr>
+                      </thead>
+                      <tbody class="tablebody">
+                          <tr class="tbody">
+                              <td colspan="1" rowspan="7" class="tbody-cat" data-label="Categoria">Unidades</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Pechuga Capesina</td>
+                              <td class="Precio" data-label="Precio">$ 17000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Alas campesinas</td>
+                            <td class="Precio" data-label="Precio">$ 15500</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Múslos Campesinos</td>
+                              <td class="Precio" data-label="Precio">$ 12500</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Múslos Marinados</td>
+                              <td class="Precio" data-label="Precio">$ 12500</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Contramuslos campesinos</td>
+                              <td class="Precio" data-label="Precio">$ 10000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Pernil Mixto Campesino</td>
+                              <td class="Precio" data-label="Precio">$ 11000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td colspan="1" rowspan="8" class="tbody-cat" data-label="Categoria">Otros Productos</td>
+                        </tr>
+                        <tr class="tbody">    
+                            <td class="Tipo" data-label="Tipo">Molipollo</td>
+                            <td class="Precio" data-label="Precio">$ 6000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                        </tr>
+                        <tr class="tbody">
+                          <td class="Tipo" data-label="Tipo">Salchicha Manguera</td>
+                          <td class="Precio" data-label="Precio">$ 8000</td>
+                          <td class="Disponibilidad" data-label="Disponibilidad">
+                            <input type="checkbox" id="Disponibilidad" />
+                            <label for="Disponibilidad">
+                            </label>
+                          </td>
+                        </tr>
+                        <tr class="tbody">
+                          <td class="Tipo" data-label="Tipo">Pollo Entero</td>
+                            <td class="Precio" data-label="Precio">$ 21000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                        </tr>
+                        <tr class="tbody">
+                          <td class="Tipo" data-label="Tipo">Bandeja de Viceras finas</td>
+                            <td class="Precio" data-label="Precio">$ 7000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                        </tr>
+                        <tr class="tbody">
+                          <td class="Tipo" data-label="Tipo">Bandeja de Corazones</td>
+                            <td class="Precio" data-label="Precio">$ 6000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                        </tr>
+                        <tr class="tbody">
+                          <td class="Tipo" data-label="Tipo">Bandeja de Mollejas</td>
+                            <td class="Precio" data-label="Precio">$ 7000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                        </tr>
+                        <tr class="tbody">
+                          <td class="Tipo" data-label="Tipo">Bandeja de Hígados</td>
+                            <td class="Precio" data-label="Precio">$ 5000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                        </tr>
+                      </tbody>
+                    <table>
+                    <table class="table">
+                      <caption class="pescadotable">Pescado</caption>
+                      <thead class="res">
+                          <tr>
+                              <th>Categoria</th>
+                              <th>Tipo</th>
+                              <th class="precio">Precio(kg)</th>
+                              <th>Disponibilidad</th>
+                          </tr>
+                      </thead>
+                      <tbody class="tablebody">
+                          <tr class="tbody">
+                              <td colspan="1" rowspan="12" class="tbody-cat" data-label="Categoria">Unidades</td>
+                          </tr>
+                          <tr class="tbody">    
+                              <td class="Tipo" data-label="Tipo">Bocachico</td>
+                              <td class="Precio" data-label="Precio">$ 16800</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Sierra</td>
+                            <td class="Precio" data-label="Precio">$ 28000</td>
+                            <td class="Disponibilidad" data-label="Disponibilidad">
+                              <input type="checkbox" id="Disponibilidad" />
+                              <label for="Disponibilidad">
+                              </label>
+                            </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Cachama</td>
+                              <td class="Precio" data-label="Precio">$ 14500</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Trucha</td>
+                              <td class="Precio" data-label="Precio">$ 30000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Tilapia Roja</td>
+                              <td class="Precio" data-label="Precio">$ 15500</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Fileta Basa</td>
+                              <td class="Precio" data-label="Precio">$ 21000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Rodajas de Bagre</td>
+                              <td class="Precio" data-label="Precio">$ 9500</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Hueso carnudo de Bagre</td>
+                              <td class="Precio" data-label="Precio">$ 9000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Lomito Natural</td>
+                              <td class="Precio" data-label="Precio">$ 8000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Lomito Apanado</td>
+                              <td class="Precio" data-label="Precio">$ 11000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                          </tr>
+                          <tr class="tbody">
+                            <td class="Tipo" data-label="Tipo">Filete Merlusa</td>
+                              <td class="Precio" data-label="Precio">$ 11000</td>
+                              <td class="Disponibilidad" data-label="Disponibilidad">
+                                <input type="checkbox" id="Disponibilidad" />
+                                <label for="Disponibilidad">
+                                </label>
+                              </td>
+                         </tr>
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+          </section> 
+          <div class="cards-container">
+              <div class="product-card">
+                  <img src="Assets/img/backimg-Carnicos.jpg" alt="carnicos" class="product-img">
+                  <div class="product-info">
+                      <div>
+                          <p>Res</p>
+                      </div>
+                      <figure>
+                          <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+                      </figure>
+                  </div> 
+              </div>
+              <div class="product-card">
+                  <img src="Assets/img/backimg-cerdo.jpg" alt="" class="product-img">
+                  <div class="product-info">
+                      <div>
+                          <p>Cerdo</p>
+                      </div>
+                      <figure>
+                          <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+                      </figure>
+                  </div>
+              </div>
+              <div class="product-card">
+                  <img src="Assets/img/backtable4.jpg" alt="carnicos" class="product-img">
+                  <div class="product-info">
+                      <div>
+                          <p>Pescado</p>
+                      </div>
+                      <figure>
+                          <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+                      </figure>
+                  </div> 
+              </div>
+              <div class="product-card">
+                  <img src="Assets/img/backimg-pollo.jpg" alt="carnicos" class="product-img">
+                  <div class="product-info">
+                      <div>
+                          <p>Pollo</p>
+                      </div>
+                      <figure>
+                          <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+                      </figure>
+                  </div> 
+              </div>
+              <div class="product-card">
+                  <img src="Assets/img/backimg-res.jpg" alt="carnicos" class="product-img">
+                  <div class="product-info">
+                      <div>
+                          <p>Nuestra Marca</p>
+                      </div>
+                      <figure>
+                          <img src="Assets/icons/bt_add_to_cart.svg" alt="">
+                      </figure>
+                  </div> 
+              </div>   
+          </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <div>
+            <aside>
+              <img src="./Assets/logos/maduradasmrsf.png" class="footlogo" alt="Logo de la Empresa">
+            </aside>
+          </div>
+          <div>
+            <aside>
+              <br><br>
+              <h3>Contacto</h3>
+              <p>Dirección: Calle Principal 123, Ciudad</p>
+              <p>Email: <a href="mailto:info@tusitio.com">info@tusitio.com</a></p>
+              <p>Teléfono: +123 456 789</p>
+              <br><br>
+            </aside>
+          </div>
+          <div class="digital">
+            <aside class="rs">
+              <h3>Redes Sociales</h3>
+              <br>
+              <div class="links">
+                <a href="#" target="_blank" aria-label="Facebook"><img src="./Assets/icons/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                <a href="#" target="_blank" aria-label="WhatsApp"><img src="./Assets/icons/whatsapp-whats-app-svgrepo-com.svg" alt="WhatsApp"></a>
+                <a href="#" target="_blank" aria-label="Instagram"><img src="./Assets/icons/instagram-1-svgrepo-com.svg" alt="Instagram"></a>
+              </div>
+            </aside>
+            <aside>
+              <br><br>
+              <div class="mp-container">
+                <aside class="mp">
+                  <h3>Medios de Pago</h3>
+                  <br>
+                  <img src="./Assets/icons/bancolombia-svgrepo-com.svg" alt="Tarjeta Bancolombia">
+                  <img src="./Assets/icons/master-card-svgrepo-com.svg" alt="MasterCard">
+                </aside>
+              </div>
+            </aside>
+          </div>
+        </div>
+        <div class="copyr">
+          <br>
+          <p>Todos los derechos reservados. | Diseñado por <a href="https://www.instagram.com/ser_dna/" target="_blank">Camilo Andrés Marín</a></p>
+          <p>&copy; 2023</p>
+        </div>
+      </footer>
+            
+    </div>
 </body>
 </html>
